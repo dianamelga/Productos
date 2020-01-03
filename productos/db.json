@@ -1,0 +1,28 @@
+{
+  "restaurant": [
+    {
+      "nombrePlatillo": "anvorguesa 2",
+      "precioPlatillo": "123",
+      "categoria": "bebida",
+      "id": 10
+    },
+    {
+      "nombrePlatillo": "anvorguesa ",
+      "precioPlatillo": "123",
+      "categoria": "postre",
+      "id": 11
+    },
+    {
+      "nombrePlatillo": "pizza",
+      "precioPlatillo": "30000",
+      "categoria": "cortes",
+      "id": 12
+    },
+    {
+      "nombrePlatillo": "lomito",
+      "precioPlatillo": "1000",
+      "categoria": "ensalada",
+      "id": 13
+    }
+  ]
+}
