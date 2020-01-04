@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-function ProductoLista({ producto }) {
+function ProductoLista({ producto, guardarRecargarProductos }) {
   const eliminarProducto = id => {
     Swal.fire({
       title: "Confirma que desea eliminar?",
@@ -21,12 +21,14 @@ function ProductoLista({ producto }) {
               `http://localhost:4000/restaurant/${id}`
             );
             if (resultado.status === 200) {
+              guardarRecargarProductos(true);
               Swal.fire(
                 "Eliminado!",
                 "El producto fue eliminado correctamente.",
                 "success"
               );
             } else {
+              guardarRecargarProductos(false);
               Swal.fire({
                 icon: "error",
                 title: "Error",
@@ -34,6 +36,7 @@ function ProductoLista({ producto }) {
               });
             }
           } catch (error) {
+            guardarRecargarProductos(false);
             console.log(error);
             Swal.fire({
               icon: "error",
